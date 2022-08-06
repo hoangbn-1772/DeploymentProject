@@ -45,12 +45,12 @@ inventory('hosts.yml');
 task('build', function () {
     run('cd {{release_path}} && build');
 });
-task('yarn:run:install', function () {
-    run('cd {{release_path}} && yarn install');
-});
-task('yarn:run:prod', function () {
-    run('cd {{release_path}} && yarn prod');
-});
+// task('yarn:run:install', function () {
+//     run('cd {{release_path}} && yarn install');
+// });
+// task('yarn:run:prod', function () {
+//     run('cd {{release_path}} && yarn prod');
+// });
 
 desc('Deploy your project');
 task('deploy', [
@@ -61,8 +61,8 @@ task('deploy', [
     'deploy:update_code',
     'deploy:shared',
     'deploy:vendors',
-    'yarn:run:install',
-    'yarn:run:prod',
+    // 'yarn:run:install',
+    // 'yarn:run:prod',
     'deploy:writable',
     'artisan:view:cache',
     'artisan:config:cache',
