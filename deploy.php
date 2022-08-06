@@ -69,7 +69,7 @@ task('deploy', [
     'artisan:optimize',
     'deploy:clear_paths',
     'artisan:storage:link',
-    'artisan:migrate',
+    // 'artisan:migrate',
     'deploy:symlink',
     'deploy:unlock',
     'cleanup',
